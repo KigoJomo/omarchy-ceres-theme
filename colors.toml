@@ -1,0 +1,41 @@
+mode = "dark"
+
+# Ceres: true-black surfaces, monochrome chrome, and GitHub Dark semantics.
+# Keep persistent UI selection neutral, while text selection uses GitHub blue
+# so selected text remains obvious on OLED-black surfaces.
+accent = "#ffffff"
+selection = "#1f1f1f"
+selection_background = "#1f6feb"
+selection_foreground = "#ffffff"
+muted = "#8b949e"
+
+background = "#000000"
+dark_background = "#080808"
+darker_background = "#030303"
+lighter_background = "#111111"
+
+foreground = "#e6edf3"
+dark_foreground = "#484f58"
+light_foreground = "#f0f6fc"
+bright_foreground = "#ffffff"
+
+red = "#ff7b72"
+yellow = "#d29922"
+orange = "#ffa657"
+green = "#3fb950"
+cyan = "#39c5cf"
+blue = "#58a6ff"
+magenta = "#bc8cff"
+brown = "#9e6a03"
+
+bright_red = "#ffa198"
+bright_yellow = "#e3b341"
+bright_green = "#56d364"
+bright_cyan = "#56d4dd"
+bright_blue = "#79c0ff"
+bright_magenta = "#d2a8ff"
+
+# A restrained white-to-blue edge gives focused windows a clear state without
+# turning the rest of the monochrome shell blue.
+hyprland_active_border = "rgba(ffffffee) rgba(58a6ffee) 45deg"
+hyprland_inactive_border = "rgba(30363daa)"

@@ -1,0 +1,8 @@
+# Ceres lock-screen states. This section overlays the generated shell theme.
+text          = "#e6edf3"
+placeholder   = "#8b949e"
+text-error    = "#ffa198"
+border        = "#30363d"
+border-active = "#ffffff"
+border-error  = "#ff7b72"
+selection     = "#1f6feb"

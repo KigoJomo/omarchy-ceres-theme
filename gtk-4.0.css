@@ -1,0 +1,265 @@
+/* Ceres theme: managed GTK override. */
+
+/* GitHub Dark Default neutrals, pushed to true black for Ceres. */
+:root {
+  --window-bg-color: #000000;
+  --window-fg-color: #f0f6fc;
+  --view-bg-color: #000000;
+  --view-fg-color: #f0f6fc;
+  --headerbar-bg-color: #000000;
+  --headerbar-fg-color: #f0f6fc;
+  --headerbar-border-color: #21262d;
+  --headerbar-shade-color: rgba(255, 255, 255, 0.06);
+  --sidebar-bg-color: #050505;
+  --sidebar-fg-color: #c9d1d9;
+  --secondary-sidebar-bg-color: #050505;
+  --secondary-sidebar-fg-color: #c9d1d9;
+  --card-bg-color: #080808;
+  --card-fg-color: #f0f6fc;
+  --popover-bg-color: #080808;
+  --popover-fg-color: #f0f6fc;
+  --dialog-bg-color: #080808;
+  --dialog-fg-color: #f0f6fc;
+  --accent-bg-color: #1f6feb;
+  --accent-fg-color: #ffffff;
+  --accent-color: #58a6ff;
+  --destructive-bg-color: #f85149;
+  --destructive-fg-color: #000000;
+  --success-bg-color: #3fb950;
+  --success-fg-color: #000000;
+  --warning-bg-color: #d29922;
+  --warning-fg-color: #000000;
+  --error-bg-color: #f85149;
+  --error-fg-color: #000000;
+  --scrollbar-outline-color: rgba(240, 246, 252, 0.13);
+  --scrollbar-slider-color: rgba(240, 246, 252, 0.30);
+  --scrollbar-slider-hover-color: rgba(240, 246, 252, 0.45);
+  --scrollbar-slider-active-color: rgba(240, 246, 252, 0.60);
+  --shade-color: rgba(0, 0, 0, 0.50);
+}
+
+window,
+.background {
+  background-color: var(--window-bg-color);
+  color: var(--window-fg-color);
+  -gtk-icon-palette: success #3fb950, warning #d29922, error #f85149;
+}
+
+headerbar,
+.titlebar {
+  background-color: var(--headerbar-bg-color);
+  background-image: none;
+  color: var(--headerbar-fg-color);
+  box-shadow: inset 0 -1px var(--headerbar-border-color);
+  -gtk-icon-palette: success #3fb950, warning #d29922, error #f85149;
+}
+
+.navigation-sidebar,
+.sidebar,
+.sidebar-pane {
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-fg-color);
+}
+
+.navigation-sidebar row,
+.navigation-sidebar row > label {
+  color: var(--sidebar-fg-color);
+}
+
+.navigation-sidebar row:hover,
+.navigation-sidebar row:selected,
+.navigation-sidebar row:selected:focus {
+  background-color: rgba(88, 166, 255, 0.20);
+  color: #ffffff;
+}
+
+.view,
+.content-view,
+gridview,
+listview {
+  background-color: var(--view-bg-color);
+  color: var(--view-fg-color);
+}
+
+.view:selected,
+.view:selected:focus,
+gridview > child:selected,
+listview > row:selected {
+  background-color: rgba(88, 166, 255, 0.20);
+  color: #ffffff;
+}
+
+button,
+button.flat,
+button.sidebar-button {
+  color: var(--window-fg-color);
+  -gtk-icon-palette: success #3fb950, warning #d29922, error #f85149;
+}
+
+button:hover,
+button.flat:hover,
+button:checked,
+button:active {
+  background-color: rgba(88, 166, 255, 0.14);
+  color: #ffffff;
+}
+
+button.suggested-action,
+button.accent,
+.suggested-action {
+  background-color: var(--accent-bg-color);
+  color: var(--accent-fg-color);
+}
+
+button.destructive-action,
+.destructive-action {
+  background-color: var(--destructive-bg-color);
+  color: var(--destructive-fg-color);
+}
+
+entry,
+searchbar,
+.searchbar,
+spinbutton,
+dropdown,
+combobox {
+  background-color: var(--card-bg-color);
+  color: var(--window-fg-color);
+  border-color: var(--headerbar-border-color);
+}
+
+entry:focus,
+searchbar:focus-within,
+spinbutton:focus-within,
+dropdown:focus,
+combobox:focus {
+  border-color: rgba(88, 166, 255, 0.75);
+  box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.28);
+}
+
+.card,
+.boxed-list {
+  background-color: var(--popover-bg-color);
+  color: var(--popover-fg-color);
+  border-color: var(--headerbar-border-color);
+}
+
+/* The popover node covers the full rectangular allocation. Painting it makes
+ * opaque corners around rounded menus and Nautilus's rename popover. Keep the
+ * outer node clear and paint only the clipped arrow and contents nodes. */
+popover,
+popover.background {
+  background-color: transparent;
+  color: var(--popover-fg-color);
+}
+
+popover > arrow,
+popover > contents,
+popover.background > arrow,
+popover.background > contents {
+  background-color: var(--popover-bg-color);
+  background-clip: padding-box;
+  border: 1px solid var(--headerbar-border-color);
+}
+
+popover > contents,
+popover.background > contents {
+  border-radius: 9px;
+}
+
+popover.menu > arrow,
+popover.menu.background > contents {
+  background-color: var(--popover-bg-color);
+}
+
+/* AdwDialog renders its visible card as a sheet inside dialog-host. Styling
+ * the outer dialog paints the whole overlay rectangle. */
+dialog-host > dialog > sheet,
+window.dialog {
+  background-color: var(--dialog-bg-color);
+  color: var(--dialog-fg-color);
+  border-color: var(--headerbar-border-color);
+}
+
+tabbar,
+tabbar tabbox,
+notebook > header,
+notebook > header > tabs > tab {
+  background-color: #050505;
+  color: #8b949e;
+  border-color: var(--headerbar-border-color);
+}
+
+tabbar tab:selected,
+notebook > header > tabs > tab:checked {
+  color: #ffffff;
+  box-shadow: inset 0 -2px #58a6ff;
+}
+
+separator {
+  background-color: var(--headerbar-border-color);
+}
+
+/* Undershoot nodes span the width or height of a scroller. Nautilus supplies
+ * its own directional edge fade, so a solid fill here becomes a large bar. */
+undershoot.top,
+undershoot.bottom,
+undershoot.left,
+undershoot.right {
+  background: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+scrollbar slider {
+  background-color: var(--scrollbar-slider-color);
+}
+
+scrollbar slider:hover {
+  background-color: var(--scrollbar-slider-hover-color);
+}
+
+scrollbar slider:active {
+  background-color: var(--scrollbar-slider-active-color);
+}
+
+progressbar progress,
+scale highlight,
+switch:checked {
+  background-color: var(--accent-bg-color);
+  color: var(--accent-fg-color);
+}
+
+progressbar trough,
+scale trough,
+switch {
+  background-color: #111111;
+  border-color: var(--headerbar-border-color);
+}
+
+check:checked,
+radio:checked {
+  background-color: var(--accent-bg-color);
+  color: var(--accent-fg-color);
+}
+
+toast,
+.toast,
+statuspage,
+.status-page {
+  background-color: var(--card-bg-color);
+  color: var(--card-fg-color);
+}
+
+link,
+.link {
+  color: #58a6ff;
+}
+
+.dim-label,
+label.dim-label,
+.dimmed,
+label:disabled,
+button:disabled {
+  color: #8b949e;
+}

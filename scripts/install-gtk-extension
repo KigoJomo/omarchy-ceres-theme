@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -euo pipefail
+
+config_root="${XDG_CONFIG_HOME:-$HOME/.config}"
+theme_root="$config_root/omarchy/themes/ceres"
+hook_source="$theme_root/scripts/ceres-gtk-theme-set"
+hook_target="$config_root/omarchy/hooks/theme-set.d/ceres-gtk-theme-set"
+current_theme_file="$HOME/.local/state/omarchy/current/theme.name"
+
+if [[ ! -f "$hook_source" ]]; then
+  printf 'Ceres GTK extension: theme is not installed at %s\n' "$theme_root" >&2
+  exit 1
+fi
+
+omarchy hook install theme-set "$hook_source"
+
+if [[ -f "$current_theme_file" ]] && [[ "$(<"$current_theme_file")" == "ceres" ]]; then
+  "$hook_target" ceres
+fi
+
+printf 'Ceres GTK extension installed. Reopen running GTK apps to apply it.\n'

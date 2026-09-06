@@ -1,0 +1,130 @@
+# Ceres syntax: GitHub Dark Default token colors.
+"keyword" = "github_red"
+"keyword.control" = "github_red"
+"function" = "github_purple"
+"function.builtin" = "github_purple"
+"function.macro" = "github_red"
+"type" = "github_orange"
+"type.builtin" = "github_orange"
+"type.enum.variant" = "github_blue"
+"constructor" = "github_purple"
+"constant" = "github_blue"
+"constant.builtin" = "github_blue"
+"constant.numeric" = "github_blue"
+"constant.character" = "github_blue"
+"constant.character.escape" = "github_green"
+"string" = "github_cyan"
+"string.regexp" = "github_cyan"
+"string.special" = "github_blue"
+"comment" = "github_comment"
+"variable" = "github_fg"
+"variable.parameter" = "github_fg"
+"variable.builtin" = "github_blue"
+"variable.other.member" = "github_blue"
+"label" = "github_blue"
+"punctuation" = "github_fg"
+"punctuation.special" = "github_blue"
+"operator" = "github_blue"
+"tag" = "github_green"
+"namespace" = "github_blue"
+"special" = "github_red"
+"attribute" = "github_blue"
+
+# Markup
+"markup.heading.1" = { fg = "github_blue", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "github_blue", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "github_blue", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "github_blue", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "github_blue", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "github_blue", modifiers = ["bold"] }
+"markup.list" = "github_orange"
+"markup.list.unchecked" = "github_blue"
+"markup.list.checked" = "github_green"
+"markup.bold" = { fg = "github_fg", modifiers = ["bold"] }
+"markup.italic" = { fg = "github_fg", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "github_cyan", modifiers = ["underlined"] }
+"markup.link.text" = "github_blue"
+"markup.link.label" = "github_blue"
+"markup.raw" = "github_blue"
+"markup.quote" = "github_green"
+
+# Diff
+"diff.plus" = "github_green"
+"diff.minus" = "github_bright_red"
+"diff.delta" = "github_orange"
+
+# Keep Helix transparent so its true-black terminal surface remains consistent.
+"ui.background" = { }
+"ui.linenr" = { fg = "github_comment" }
+"ui.linenr.selected" = { fg = "github_fg" }
+"ui.statusline" = { fg = "background", bg = "github_fg" }
+"ui.statusline.inactive" = { fg = "background", bg = "github_comment" }
+"ui.statusline.normal" = { fg = "background", bg = "github_blue", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "background", bg = "github_green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "background", bg = "github_purple", modifiers = ["bold"] }
+"ui.popup" = { fg = "github_fg", bg = "background" }
+"ui.window" = { fg = "github_comment" }
+"ui.help" = { fg = "github_fg", bg = "background" }
+"ui.bufferline" = { fg = "github_comment", bg = "background" }
+"ui.bufferline.active" = { fg = "github_fg", bg = "background", underline = { color = "github_fg", style = "line" } }
+"ui.text" = "github_fg"
+"ui.text.focus" = { fg = "github_fg", bg = "lighter_background", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "github_comment" }
+"ui.text.directory" = { fg = "github_blue" }
+"ui.virtual" = "github_comment"
+"ui.virtual.ruler" = { bg = "lighter_background" }
+"ui.virtual.indent-guide" = "github_comment"
+"ui.virtual.inlay-hint" = { fg = "github_comment" }
+"ui.virtual.jump-label" = { fg = "github_orange", modifiers = ["bold"] }
+"ui.virtual.whitespace" = "github_comment"
+"ui.selection" = { bg = "selection_background", fg = "selection_foreground" }
+"ui.cursor" = { fg = "background", bg = "cursor" }
+"ui.cursor.primary" = { fg = "background", bg = "cursor" }
+"ui.cursor.match" = { fg = "github_orange", modifiers = ["bold"] }
+"ui.cursor.primary.normal" = { fg = "background", bg = "cursor" }
+"ui.cursor.primary.insert" = { fg = "background", bg = "github_green" }
+"ui.cursor.primary.select" = { fg = "background", bg = "github_purple" }
+"ui.cursorline.primary" = { bg = "lighter_background" }
+"ui.highlight" = { bg = "lighter_background", modifiers = ["bold"] }
+"ui.menu" = { fg = "github_fg", bg = "background" }
+"ui.menu.selected" = { fg = "background", bg = "github_fg", modifiers = ["bold"] }
+
+"diagnostic.error" = { underline = { color = "github_red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "github_yellow", style = "curl" } }
+"diagnostic.info" = { underline = { color = "github_blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "github_cyan", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+error = "github_red"
+warning = "github_yellow"
+info = "github_blue"
+hint = "github_cyan"
+
+[palette]
+background = "#000000"
+foreground = "#e6edf3"
+lighter_background = "#111111"
+cursor = "#ffffff"
+selection_background = "#1f1f1f"
+selection_foreground = "#ffffff"
+github_fg = "#e6edf3"
+github_comment = "#8b949e"
+github_red = "#ff7b72"
+github_bright_red = "#ffa198"
+github_orange = "#ffa657"
+github_yellow = "#d29922"
+github_green = "#7ee787"
+github_blue = "#79c0ff"
+github_cyan = "#a5d6ff"
+github_purple = "#d2a8ff"
+color0 = "#000000"
+color1 = "#ff7b72"
+color2 = "#3fb950"
+color3 = "#d29922"
+color4 = "#58a6ff"
+color5 = "#bc8cff"
+color6 = "#39c5cf"
+color7 = "#e6edf3"
+color8 = "#7d8590"
