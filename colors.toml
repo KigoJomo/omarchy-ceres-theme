@@ -35,7 +35,6 @@ bright_cyan = "#56d4dd"
 bright_blue = "#79c0ff"
 bright_magenta = "#d2a8ff"
 
-# A restrained white-to-blue edge gives focused windows a clear state without
-# turning the rest of the monochrome shell blue.
-hyprland_active_border = "rgba(ffffffee) rgba(58a6ffee) 45deg"
+# A muted, solid white edge marks the focused window.
+hyprland_active_border = "rgba(c9d1d9cc)"
 hyprland_inactive_border = "rgba(30363daa)"

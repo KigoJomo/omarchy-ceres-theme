@@ -19,9 +19,21 @@ omarchy theme bg next
 
 ## Optional GTK extension
 
-Omarchy does not install executable hooks from downloaded themes. Ceres ships
-an optional, reviewable hook that applies its GTK 3 and GTK 4 styling to apps
-such as Files and Remmina:
+Omarchy does not install executable hooks from downloaded themes. The official
+theme registry also omits GTK CSS files. Ceres keeps an optional, reviewable
+hook in this repository that applies its GTK 3 and GTK 4 styling to apps such
+as Files and Remmina. For a registry installation, copy the CSS files and hook
+from this repository into the installed Ceres theme first:
+
+```bash
+git clone --depth 1 https://github.com/KigoJomo/omarchy-ceres-theme.git /tmp/ceres-gtk-extension
+install -Dm644 /tmp/ceres-gtk-extension/gtk-3.0.css ~/.config/omarchy/themes/ceres/gtk-3.0.css
+install -Dm644 /tmp/ceres-gtk-extension/gtk-4.0.css ~/.config/omarchy/themes/ceres/gtk-4.0.css
+install -Dm755 /tmp/ceres-gtk-extension/scripts/ceres-gtk-theme-set ~/.config/omarchy/themes/ceres/scripts/ceres-gtk-theme-set
+install -Dm755 /tmp/ceres-gtk-extension/scripts/install-gtk-extension ~/.config/omarchy/themes/ceres/scripts/install-gtk-extension
+```
+
+Then run:
 
 ```bash
 ~/.config/omarchy/themes/ceres/scripts/install-gtk-extension
@@ -39,7 +51,7 @@ the installed hook matches the new version. Remove it with:
 ## Design and coverage
 
 - OLED-black primary surfaces with subtle `#080808` and `#111111` elevation.
-- White controls and a white-to-blue focused-window edge.
+- White controls and a muted, solid white focused-window edge.
 - Neutral persistent selections and blue text selections for clarity.
 - GitHub Dark-inspired semantic colors for code, diffs, warnings, and links.
 - Yaru-blue icons and matching Plymouth unlock artwork.
@@ -49,9 +61,10 @@ For downloaded themes, Omarchy generates terminal, Hyprland, Neovim, btop,
 Chromium, Obsidian, and shell configurations from `colors.toml`. That keeps the
 install safe and makes the palette consistent across supported apps.
 
-## Personal wallpapers
+## Wallpapers
 
-Put images that you have the right to use in:
+The seven wallpapers in `backgrounds/` ship with Ceres. To add more personal
+wallpapers, put images that you have the right to use in:
 
 ```text
 ~/.config/omarchy/backgrounds/ceres/
